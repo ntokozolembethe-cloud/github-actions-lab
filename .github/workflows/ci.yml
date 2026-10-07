@@ -13,5 +13,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Run application
-        run: ./app.sh
+      - name: Make scripts executable
+        run: chmod +x app.sh test.sh
+
+      - name: Run tests
+        run: ./test.sh
